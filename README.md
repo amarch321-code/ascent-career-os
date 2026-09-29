@@ -8,7 +8,7 @@
 
 From *operator* to a high-paying data, BI or product role — one stage, one project, one credential at a time.
 
-[**▶ Live demo**](https://your-github-username.github.io/ascent-career-os/) &nbsp;·&nbsp; [The product story](#-the-product-story-how-ascent-was-built) &nbsp;·&nbsp; [Features](#-what-it-does)
+[**▶ Live demo**](https://amarch321-code.github.io/ascent-career-os/) &nbsp;·&nbsp; [The product story](#-the-product-story-how-ascent-was-built) &nbsp;·&nbsp; [Features](#-what-it-does)
 
 ![Made with](https://img.shields.io/badge/built_with-HTML_·_CSS_·_vanilla_JS-1a6a5a) ![No dependencies](https://img.shields.io/badge/dependencies-0-bb6f18) ![PWA](https://img.shields.io/badge/installable-PWA-555) ![License](https://img.shields.io/badge/license-MIT-999)
 
