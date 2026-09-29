@@ -330,7 +330,10 @@ const RENDERERS={dashboard:renderDashboard,roadmap:renderRoadmap,skills:renderSk
 function render(){renderNav();if(RENDERERS[ACTIVE])RENDERERS[ACTIVE]();}
 function go(view){if(!RENDERERS[view])return;ACTIVE=view;
   ["dashboard","roadmap","skills","certs","projects","log","jobs"].forEach(v=>{$("#v-"+v).hidden=(v!==ACTIVE);});
-  RENDERERS[ACTIVE]();renderNav();window.scrollTo({top:0,behavior:"smooth"});}
+  RENDERERS[ACTIVE]();renderNav();
+  try{history.replaceState(null,"",view==="dashboard"?location.pathname+location.search:"#"+view);}catch(e){}
+  window.scrollTo({top:0,behavior:"smooth"});}
+window.addEventListener("hashchange",()=>{const h=(location.hash||"").replace(/^#/,"");if(RENDERERS[h]&&h!==ACTIVE)go(h);});
 
 /* interactions */
 document.addEventListener("click",e=>{
@@ -385,6 +388,7 @@ $("#themebtn").addEventListener("click",()=>{const d=!isDark();document.document
 
 /* boot */
 loadLocal();initTheme();render();
+try{const _h=(location.hash||"").replace(/^#/,"");if(RENDERERS[_h]&&_h!=="dashboard")go(_h);}catch(e){}
 document.body.classList.add("boot");
 setTimeout(()=>document.body.classList.remove("boot"),1500);
 initDb();
