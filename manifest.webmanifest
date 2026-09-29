@@ -1,0 +1,14 @@
+{
+  "name": "Ascent — Career OS",
+  "short_name": "Ascent",
+  "description": "A field journal for the climb from operator to a high-paying data, BI or product role, mapped to live 2026 market demand.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#eceee6",
+  "theme_color": "#141a16",
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
